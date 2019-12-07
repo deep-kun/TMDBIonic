@@ -18,7 +18,22 @@
         <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
       </ion-card-content>
     </ion-card>
-    <ion-list lines="none">
+
+    <ion-list>
+        <ion-item *ngFor="let f of films | async">
+          <h1>1</h1>
+        </ion-item>
+    </ion-list>
+
+    <ion-item-divider>
+        Item Divider
+      </ion-item-divider>
+
+      <ion-item *ngFor="let film of films">
+          Item {{film.title}}
+        </ion-item>
+
+    <ion-list >
       <ion-list-header>
         <ion-label>Resources</ion-label>
       </ion-list-header>

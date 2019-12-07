@@ -12,9 +12,11 @@ export class RequestInterceptorService implements HttpInterceptor {
       request = request.clone({
         setParams: {
           api_key: AppConfigs.ApiKey
-        }});
+        }
+    });
 
-      return next.handle(request);
+    console.log(request.urlWithParams);
+    return next.handle(request);
   }
 
   constructor() { }
