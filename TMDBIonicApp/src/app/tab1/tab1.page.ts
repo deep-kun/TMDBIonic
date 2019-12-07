@@ -10,8 +10,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Tab1Page {
   public films: Film[];
+  public readonly constans: AppConfigs;
 
   constructor(http: HttpClient) {
+    this.constans = AppConfigs;
+
     http.get<FilmsWrapper>(AppConfigs.ApiUrl + '/discover/movie').subscribe(results => {
       this.films = results.results;
       console.log(this.films);
