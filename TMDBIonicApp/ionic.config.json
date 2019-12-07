@@ -1,0 +1,7 @@
+{
+  "name": "TMDBIonicApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
