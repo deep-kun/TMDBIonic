@@ -1,9 +1,18 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      {{film.title}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-card class="welcome-card">
+    <ion-card-title>{{film.title}}</ion-card-title>
+    <ion-card-content style="text-size-adjust: auto;" >
+        <img style="margin-left: auto;margin-right: auto;width:100%;height:100%;"  src = {{constans.ImagesPath}}{{film.poster_path}} />
+        {{film.release_date}}<br>
+        {{GetGenresNames(film.genre_ids)}}
+    </ion-card-content>
+</ion-card>
 
 <ion-content></ion-content>

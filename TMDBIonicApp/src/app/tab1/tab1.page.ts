@@ -17,7 +17,8 @@ export class Tab1Page {
   public readonly constans: AppConfigs;
 
   public OnClick(f: Film) {
-    console.log(f);
+    localStorage.removeItem('film');
+    localStorage.setItem('film', JSON.stringify(f));
     this.router.navigate(['tabs/tab2']);
   }
 
