@@ -14,9 +14,7 @@ export class RequestInterceptorService implements HttpInterceptor {
           api_key: AppConfigs.ApiKey
         }
     });
-
-    console.log(request.urlWithParams);
-    return next.handle(request);
+      return next.handle(request);
   }
 
   constructor() { }

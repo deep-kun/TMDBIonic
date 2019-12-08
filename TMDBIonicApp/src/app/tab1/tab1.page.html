@@ -6,13 +6,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-conten>
-      <ion-item *ngFor="let film of films">
-          <ion-card class="welcome-card">
+<ion-content>
+      <ion-item *ngFor="let film of films" (click)="OnClick(film)" style="display:inline-block;width: 50%;" >
+          <ion-card class="welcome-card" style="text-align: center;text-align: center;width:100%;align-content: center;">
               <ion-card-title>{{film.title}}</ion-card-title>
-              <img style="width:25%;height:40%;"  src = {{constans.ImagesPath}}{{film.poster_path}} />
-              <ion-card-content>
-                  {{film.overview}}
+              <img style="margin-left: auto;margin-right: auto;width:100%;height:100%;"  src = {{constans.ImagesPath}}{{film.poster_path}} />
+              <ion-card-content style="text-size-adjust: auto;" >
+                  {{film.release_date}}<br>
+                  {{GetGenresNames(film.genre_ids)}}
               </ion-card-content>
           </ion-card>
         </ion-item>
